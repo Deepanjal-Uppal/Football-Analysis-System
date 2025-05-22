@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Success</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Uploaded Successfully</h1>
+
+        {% if video_url %}
+            <p class="success-message">Click the button below to download your processed video:</p>
+            <!-- Download Button -->
+            <a href="{{ video_url }}" download class="download-btn">Download Video</a>
+        {% else %}
+            <p class="error-message">No video available for download.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

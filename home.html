@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Football Analysis System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/home.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/static/logo.png" alt="HDA Football Metrics Logo" />
+            <span style="font-size: 1.5em; font-weight: bold;">HDAFootballMetrics</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href=" ">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/upload">Upload</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Quote Container -->
+    <div class="quote-container" id="quote">
+        <!-- Random quote will be displayed here -->
+    </div>
+
+    <div class="container">
+        <!-- Image Container -->
+        <div class="image-container">
+            <img src="/static/homepage.png" alt="Football Analysis" />
+        </div>
+
+        <!-- Boxes with Links -->
+        <div class="boxes">
+            <div class="box">
+                <h3><a href="/upload">Search Teams Performance Solutions</a></h3>
+                <p>Analysis your football match here </p>
+            </div>
+            <div class="box">
+                <h3><a href="/upload">For Fans and Family </a></h3>
+                <p>Watch your matches here </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p style="color: white;">&copy; 2024 HDAFootballMetrics. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Array of quotes
+        const quotes = [
+            "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt",
+            "Life is 10% what happens to us and 90% how we react to it. – Charles R. Swindoll",
+            "The only way to do great work is to love what you do. – Steve Jobs",
+            "Success is not the key to happiness. Happiness is the key to success. – Albert Schweitzer",
+            "The best way to predict the future is to create it. – Peter Drucker",
+            "Believe you can and you're halfway there. – Theodore Roosevelt",
+            "What lies behind us and what lies before us are tiny matters compared to what lies within us. – Ralph Waldo Emerson",
+            "The only limit to our realization of tomorrow will be our doubts of today. – Franklin D. Roosevelt",
+            "You miss 100% of the shots you don’t take. – Wayne Gretzky",
+            "It does not matter how slowly you go as long as you do not stop. – Confucius"
+        ];
+
+        // Function to display a random quote
+        function displayRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quoteElement = document.getElementById('quote');
+            quoteElement.textContent = quotes[randomIndex];
+        }
+
+        // Call the function to display a quote when the page loads
+        window.onload = displayRandomQuote;
+    </script>
+</body>
+</html>
